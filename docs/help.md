@@ -6,4 +6,5 @@
 
 ## examples
 
-- simple examples, https://github.com/TheGreyGhost/MinecraftByExample
+- MinecraftByExample (Forge 1.16.4), https://github.com/TheGreyGhost/MinecraftByExample
+- YouTube-Tutorials-18 (Forge 1.18), https://wiki.mcjty.eu/modding/index.php?title=YouTube-Tutorials-18
