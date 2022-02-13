@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "pokez:chicken",
+    "pokez:cow",
+    "pokez:sheep",
+    "pokez:pig"
+  ]
+}
