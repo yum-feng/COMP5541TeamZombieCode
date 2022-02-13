@@ -3,8 +3,6 @@ package teamzombie.pokez.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
-import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.items.PokemonAnimalItem;
@@ -18,11 +16,6 @@ public class ModItemTags extends ItemTagsProvider {
 
 	@Override
 	protected void addTags() {
-//		tag(Tags.Items.ORES)
-//			.add(Registration.Block_1_Item.get())
-//			.add(Registration.Block_2_Item.get())
-//			.add(Registration.Block_3_Item.get())
-//			.add(Registration.Block_4_Item.get());
 		tag(PokemonAnimalItem.Pokemon_Animal_Item)
 			.add(Registration.Chicken.get())
 			.add(Registration.Cow.get())
