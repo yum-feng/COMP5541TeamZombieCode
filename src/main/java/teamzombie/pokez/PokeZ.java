@@ -10,6 +10,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import teamzombie.pokez.core.ItemInit;
 import teamzombie.pokez.events.EntityRightClickEvent;
 
 import java.util.stream.Collectors;
@@ -30,6 +31,7 @@ public class PokeZ
 		// Prints to the console the name of the entity that is hit
 		// Why it prints several times... beats me!
 		eventModBus.register(new EntityRightClickEvent());
+		ItemInit.ITEMS.register(modbus);
 		
 //		modbus.addListener(ModSetup::init);
 //		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
