@@ -16,7 +16,7 @@ public class ModItemTags extends ItemTagsProvider {
 
 	@Override
 	protected void addTags() {
-		tag(PokemonAnimalItem.Pokemon_Animal_Item)
+		tag(PokemonAnimalItem.POKEMON_ANIMAL_ITEM)
 			.add(Registration.Chicken.get())
 			.add(Registration.Cow.get())
 			.add(Registration.Sheep.get())

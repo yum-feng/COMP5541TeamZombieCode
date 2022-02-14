@@ -2,12 +2,14 @@ package teamzombie.pokez.items;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.setup.Registration;
 
 /*+----------------------------------------------------------------------
 ||
@@ -31,18 +33,18 @@ import teamzombie.pokez.PokeZ;
 public class PokemonAnimalItem extends Item {
 	
 	public static final String TAB_NAME = "Pokemon Animals";
-	public static final Tags.IOptionalNamedTag<Item> Pokemon_Animal_Item = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokemon_animal"));
+	public static final Tags.IOptionalNamedTag<Item> POKEMON_ANIMAL_ITEM = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokemon_animal"));
 
-	public PokemonAnimalItem(Properties p_41383_) {
-		super(p_41383_.tab(ITEM_GROUP));
+	public PokemonAnimalItem(Properties props) {
+		super(props.tab(ITEM_GROUP));
 
 	}
 	
-	// Define creative mode tab for pokemon
+	// Define creative mode tab for pokemon animals
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
 		@Override
 		public ItemStack makeIcon() { 
-			return new ItemStack (Items.BLACK_CANDLE); 
+			return new ItemStack (Registration.Cow.get()); 
 		};
-	};
+	};	
 }
