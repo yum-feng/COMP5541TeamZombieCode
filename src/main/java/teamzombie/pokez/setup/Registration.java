@@ -37,10 +37,7 @@ public class Registration {
 	// Registries for blocks and items
 	private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PokeZ.MODID);
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PokeZ.MODID);
-	
-	// Basic item properties
-	public static final Item.Properties ITEM_PROPERTIES = new Item.Properties();
-	
+
 	public static void init() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BLOCKS.register(bus);
@@ -49,17 +46,17 @@ public class Registration {
 	}
 	
 	// Registering pokemon animal items
-	public static final RegistryObject<Item> Bee_Item = ITEMS.register("bee_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Cat_Item = ITEMS.register("cat_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Chicken_Item = ITEMS.register("chicken_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Cow_Item = ITEMS.register("cow_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Donkey_Item = ITEMS.register("donkey_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Fox_Item = ITEMS.register("fox_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Goat_Item = ITEMS.register("goat_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Pig_Item = ITEMS.register("pig_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Bee_Item = ITEMS.register("bee_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Cat_Item = ITEMS.register("cat_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Chicken_Item = ITEMS.register("chicken_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Cow_Item = ITEMS.register("cow_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Donkey_Item = ITEMS.register("donkey_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Fox_Item = ITEMS.register("fox_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Goat_Item = ITEMS.register("goat_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Pig_Item = ITEMS.register("pig_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
 	
 }
