@@ -2,11 +2,9 @@ package teamzombie.pokez.items;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.setup.Registration;
@@ -44,7 +42,7 @@ public class PokemonAnimalItem extends Item {
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
 		@Override
 		public ItemStack makeIcon() { 
-			return new ItemStack (Registration.Cow.get()); 
+			return new ItemStack (Registration.Wolf_Item.get()); 
 		};
 	};	
 }

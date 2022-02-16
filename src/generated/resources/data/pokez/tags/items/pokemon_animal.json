@@ -1,9 +1,16 @@
 {
   "replace": false,
   "values": [
-    "pokez:chicken",
-    "pokez:cow",
-    "pokez:sheep",
-    "pokez:pig"
+    "pokez:bee_item",
+    "pokez:cat_item",
+    "pokez:chicken_item",
+    "pokez:cow_item",
+    "pokez:donkey_item",
+    "pokez:fox_item",
+    "pokez:goat_item",
+    "pokez:pig_item",
+    "pokez:rabbit_item",
+    "pokez:sheep_item",
+    "pokez:wolf_item"
   ]
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "pokez:item/pig"
+    "layer0": "pokez:item/fox_item"
   }
 }

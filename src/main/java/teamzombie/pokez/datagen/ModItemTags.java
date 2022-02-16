@@ -17,10 +17,17 @@ public class ModItemTags extends ItemTagsProvider {
 	@Override
 	protected void addTags() {
 		tag(PokemonAnimalItem.POKEMON_ANIMAL_ITEM)
-			.add(Registration.Chicken.get())
-			.add(Registration.Cow.get())
-			.add(Registration.Sheep.get())
-			.add(Registration.Pig.get());
+			.add(Registration.Bee_Item.get())
+			.add(Registration.Cat_Item.get())
+			.add(Registration.Chicken_Item.get())
+			.add(Registration.Cow_Item.get())
+			.add(Registration.Donkey_Item.get())
+			.add(Registration.Fox_Item.get())
+			.add(Registration.Goat_Item.get())
+			.add(Registration.Pig_Item.get())
+			.add(Registration.Rabbit_Item.get())
+			.add(Registration.Sheep_Item.get())
+			.add(Registration.Wolf_Item.get());
 	}
 	
 	@Override 

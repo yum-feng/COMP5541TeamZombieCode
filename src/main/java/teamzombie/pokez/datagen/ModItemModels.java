@@ -21,10 +21,17 @@ public class ModItemModels extends ItemModelProvider {
 
 	
 		// Model json generation for pokemon animal items
-		singleTexture(Registration.Chicken.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/chicken"));
-		singleTexture(Registration.Cow.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/cow"));
-		singleTexture(Registration.Pig.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/pig"));
-		singleTexture(Registration.Sheep.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/sheep"));
+		singleTexture(Registration.Bee_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/bee_item"));
+		singleTexture(Registration.Cat_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/cat_item"));
+		singleTexture(Registration.Chicken_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/chicken_item"));
+		singleTexture(Registration.Cow_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/cow_item"));
+		singleTexture(Registration.Donkey_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/donkey_item"));
+		singleTexture(Registration.Fox_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/fox_item"));
+		singleTexture(Registration.Goat_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/goat_item"));
+		singleTexture(Registration.Pig_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/pig_item"));
+		singleTexture(Registration.Rabbit_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/rabbit_item"));
+		singleTexture(Registration.Sheep_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/sheep_item"));
+		singleTexture(Registration.Wolf_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/wolf_item"));
 	};
 	
 	

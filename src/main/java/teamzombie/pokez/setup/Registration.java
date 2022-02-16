@@ -49,9 +49,17 @@ public class Registration {
 	}
 	
 	// Registering pokemon animal items
-	public static final RegistryObject<Item> Cow = ITEMS.register("cow", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Pig = ITEMS.register("pig", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Sheep = ITEMS.register("sheep", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
-	public static final RegistryObject<Item> Chicken = ITEMS.register("chicken", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Bee_Item = ITEMS.register("bee_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Cat_Item = ITEMS.register("cat_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Chicken_Item = ITEMS.register("chicken_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Cow_Item = ITEMS.register("cow_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Donkey_Item = ITEMS.register("donkey_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Fox_Item = ITEMS.register("fox_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Goat_Item = ITEMS.register("goat_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Pig_Item = ITEMS.register("pig_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem(ITEM_PROPERTIES));
+
 	
 }
