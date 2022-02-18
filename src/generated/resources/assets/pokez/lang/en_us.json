@@ -1,0 +1,14 @@
+{
+  "item.pokez.bee_item": "Bee",
+  "item.pokez.cat_item": "Cat",
+  "item.pokez.chicken_item": "Chicken",
+  "item.pokez.cow_item": "Cow",
+  "item.pokez.donkey_item": "Donkey",
+  "item.pokez.fox_item": "Fox",
+  "item.pokez.goat_item": "Goat",
+  "item.pokez.pig_item": "Pig",
+  "item.pokez.rabbit_item": "Rabbit",
+  "item.pokez.sheep_item": "Sheep",
+  "item.pokez.wolf_item": "Wolf",
+  "itemGroup.Pokemon Animals": "Pokemon Animals"
+}
