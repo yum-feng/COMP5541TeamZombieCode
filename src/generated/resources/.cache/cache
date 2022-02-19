@@ -1,4 +1,6 @@
-641e2e93c0dac786f0e89a64508d97c55c224a2a assets/pokez/lang/en_us.json
+989d49c12682821c0704f9f979bf07a1c6bf15fb assets/pokez/blockstates/pokeball_block.json
+3ca1456bd86fdcdda68849c6ee00057370d6ee12 assets/pokez/lang/en_us.json
+bc8ff9c27b63c6b77b5e39f3111df0aa2e2bfcaf assets/pokez/models/block/pokeball_block.json
 8bbe57adce319486c2fabeab8bdc675bcd8c1a53 assets/pokez/models/item/bee_item.json
 b3e67223bfd79284e43b08d9a80441493332b2b3 assets/pokez/models/item/cat_item.json
 51ea31aef758546f9bff92d5fd33713298ab54d3 assets/pokez/models/item/chicken_item.json
@@ -7,7 +9,12 @@ b3e67223bfd79284e43b08d9a80441493332b2b3 assets/pokez/models/item/cat_item.json
 526a43c762e9195cfb73c591c6d00f458caa7e42 assets/pokez/models/item/fox_item.json
 43af41c35360fb0421af3e9c8d1cd7079466c50a assets/pokez/models/item/goat_item.json
 4f21a8df5f83fd004fdcc7d30b695b5af554af09 assets/pokez/models/item/pig_item.json
+713c6a0c864c65e43c4e45bb6a2fea23a569bf04 assets/pokez/models/item/pokeball_block.json
 0e836f665c639ba7f18dae25581f4b87e76c9dc5 assets/pokez/models/item/rabbit_item.json
 0ff15cd39e70ffc40cee0eceb88cf983b12a05a6 assets/pokez/models/item/sheep_item.json
 10025555d8a07b573e0b6f363980361bf4d17987 assets/pokez/models/item/wolf_item.json
+a7f2675daadc1ada97782455e89a40a932c96abd data/minecraft/tags/blocks/mineable/pickaxe.json
+a7f2675daadc1ada97782455e89a40a932c96abd data/minecraft/tags/blocks/needs_diamond_tool.json
+a7f2675daadc1ada97782455e89a40a932c96abd data/pokez/tags/blocks/pokeball_block.json
 5919c7f9924a8f23722086078fb1f613b1bec6aa data/pokez/tags/items/pokemon_animal.json
+a7f2675daadc1ada97782455e89a40a932c96abd data/pokez/tags/items/pokemon_block.json

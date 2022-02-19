@@ -28,6 +28,7 @@ public class ModLanguageProvider extends LanguageProvider {
 		add(Registration.Rabbit_Item.get(), "Rabbit");
 		add(Registration.Sheep_Item.get(), "Sheep");
 		add(Registration.Wolf_Item.get(), "Wolf");
+		add(Registration.Pokeball_Block_Item.get(), "Pokeball Block");
 		
 	}
 

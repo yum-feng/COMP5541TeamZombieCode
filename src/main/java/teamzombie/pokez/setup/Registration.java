@@ -9,6 +9,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.items.PokemonAnimalItem;
+import teamzombie.pokez.items.PokemonBlockItem;
+import teamzombie.pokez.blocks.PokeballBlock;
 
 /*+----------------------------------------------------------------------
 ||
@@ -58,5 +60,7 @@ public class Registration {
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
-	
+	// Registering pokemon block and block item
+	public static final RegistryObject<Block> Pokeball_Block = BLOCKS.register("pokeball_block", () -> new PokeballBlock());
+	public static final RegistryObject<Item> Pokeball_Block_Item = ITEMS.register("pokeball_block", () -> new PokemonBlockItem(Pokeball_Block.get()));
 }

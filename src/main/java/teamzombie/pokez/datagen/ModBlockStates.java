@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.setup.Registration;
 
 public class ModBlockStates extends BlockStateProvider {
 	
@@ -14,7 +15,7 @@ public class ModBlockStates extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		
-		//simpleBlock(Registration.Example_Bloc.get());
+		simpleBlock(Registration.Pokeball_Block.get());
 
 	}
 
