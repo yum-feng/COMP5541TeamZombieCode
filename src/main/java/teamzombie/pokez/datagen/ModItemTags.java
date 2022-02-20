@@ -5,6 +5,7 @@ import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.items.PokeballItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.setup.Registration;
 
@@ -28,6 +29,11 @@ public class ModItemTags extends ItemTagsProvider {
 			.add(Registration.Rabbit_Item.get())
 			.add(Registration.Sheep_Item.get())
 			.add(Registration.Wolf_Item.get());
+		
+		tag(PokeballItem.POKEMON_BALLS)
+		    .add(Registration.Pokeball.get())
+		    .add(Registration.Green_Pokeball.get())
+		    .add(Registration.Blue_Pokeball.get());
 	}
 	
 	@Override 

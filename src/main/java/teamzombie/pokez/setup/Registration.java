@@ -1,3 +1,4 @@
+
 package teamzombie.pokez.setup;
 
 import net.minecraft.world.item.Item;
@@ -8,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.items.PokeballItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 
 /*+----------------------------------------------------------------------
@@ -57,6 +59,8 @@ public class Registration {
 	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
-
+	public static final RegistryObject<Item> Pokeball = ITEMS.register("pokeball", () -> new PokeballItem());
+	public static final RegistryObject<Item> Green_Pokeball = ITEMS.register("green_pokeball", () -> new PokeballItem());
+	public static final RegistryObject<Item> Blue_Pokeball = ITEMS.register("blue_pokeball", () -> new PokeballItem());
 	
 }

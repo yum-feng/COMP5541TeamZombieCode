@@ -11,4 +11,8 @@
   "item.pokez.sheep_item": "Sheep",
   "item.pokez.wolf_item": "Wolf",
   "itemGroup.Pokemon Animals": "Pokemon Animals"
+  "item.pokez.pokeball": "Pokeball",
+  "item.pokez.green_pokeball": "Blue_Pokeball",
+  "item.pokez.blue_pokeball": "Green_Pokeball",
+  "itemGroup.Pokeballs": "Pokeballs"
 }

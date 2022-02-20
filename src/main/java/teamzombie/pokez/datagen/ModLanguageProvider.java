@@ -3,6 +3,7 @@ package teamzombie.pokez.datagen;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.items.PokeballItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.setup.Registration;
 
@@ -29,6 +30,10 @@ public class ModLanguageProvider extends LanguageProvider {
 		add(Registration.Sheep_Item.get(), "Sheep");
 		add(Registration.Wolf_Item.get(), "Wolf");
 		
+		add("itemGroup." + PokeballItem.TAB_NAME, PokeballItem.TAB_NAME);
+		add(Registration.Pokeball.get(), "Pokeball");
+		add(Registration.Blue_Pokeball.get(), "Blue_Pokeball");
+		add(Registration.Green_Pokeball.get(), "Green_Pokeball");
 	}
 
 }
