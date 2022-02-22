@@ -15,7 +15,9 @@ public class ModBlockStates extends BlockStateProvider {
 	@Override
 	protected void registerStatesAndModels() {
 		
-		simpleBlock(Registration.Pokeball_Block.get());
+		simpleBlock(Registration.Pokeball_Red_Block.get());
+		simpleBlock(Registration.Pokeball_Green_Block.get());
+		simpleBlock(Registration.Pokeball_Blue_Block.get());
 
 	}
 

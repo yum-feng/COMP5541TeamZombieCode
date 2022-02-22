@@ -2,7 +2,6 @@ package teamzombie.pokez.datagen;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.blocks.PokeballBlock;
@@ -16,16 +15,11 @@ public class ModBlockTags extends BlockTagsProvider {
 
 	@Override
 	protected void addTags() {
-			
-		
-		tag(BlockTags.MINEABLE_WITH_PICKAXE)
-			.add(Registration.Pokeball_Block.get());
-		tag(BlockTags.NEEDS_DIAMOND_TOOL)
-			.add(Registration.Pokeball_Block.get());
+
 		tag(PokeballBlock.POKEBALL_BLOCK_TAG)
-			.add(Registration.Pokeball_Block.get());
-
-
+			.add(Registration.Pokeball_Red_Block.get())
+			.add(Registration.Pokeball_Green_Block.get())
+			.add(Registration.Pokeball_Blue_Block.get());
 	}
 	
 	@Override 

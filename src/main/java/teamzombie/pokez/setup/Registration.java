@@ -43,8 +43,7 @@ public class Registration {
 	public static void init() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BLOCKS.register(bus);
-		ITEMS.register(bus);
-		
+		ITEMS.register(bus);	
 	}
 	
 	// Registering pokemon animal items
@@ -60,7 +59,11 @@ public class Registration {
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
-	// Registering pokemon block and block item
-	public static final RegistryObject<Block> Pokeball_Block = BLOCKS.register("pokeball_block", () -> new PokeballBlock());
-	public static final RegistryObject<Item> Pokeball_Block_Item = ITEMS.register("pokeball_block", () -> new PokemonBlockItem(Pokeball_Block.get()));
+	// Registering pokemon blocks and block items
+	public static final RegistryObject<Block> Pokeball_Red_Block = BLOCKS.register("pokeball_red_block", () -> new PokeballBlock());
+	public static final RegistryObject<Item> Pokeball_Red_Block_Item = ITEMS.register("pokeball_red_block", () -> new PokemonBlockItem(Pokeball_Red_Block.get()));
+	public static final RegistryObject<Block> Pokeball_Green_Block = BLOCKS.register("pokeball_green_block", () -> new PokeballBlock());
+	public static final RegistryObject<Item> Pokeball_Green_Block_Item = ITEMS.register("pokeball_green_block", () -> new PokemonBlockItem(Pokeball_Green_Block.get()));
+	public static final RegistryObject<Block> Pokeball_Blue_Block = BLOCKS.register("pokeball_blue_block", () -> new PokeballBlock());
+	public static final RegistryObject<Item> Pokeball_Blue_Block_Item = ITEMS.register("pokeball_blue_block", () -> new PokemonBlockItem(Pokeball_Blue_Block.get()));
 }

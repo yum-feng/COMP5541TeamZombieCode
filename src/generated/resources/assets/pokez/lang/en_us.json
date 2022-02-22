@@ -1,5 +1,7 @@
 {
-  "block.pokez.pokeball_block": "Pokeball Block",
+  "block.pokez.pokeball_blue_block": "Blue Pokeball Block",
+  "block.pokez.pokeball_green_block": "Green Pokeball Block",
+  "block.pokez.pokeball_red_block": "Red Pokeball Block",
   "item.pokez.bee_item": "Bee",
   "item.pokez.cat_item": "Cat",
   "item.pokez.chicken_item": "Chicken",
@@ -11,5 +13,6 @@
   "item.pokez.rabbit_item": "Rabbit",
   "item.pokez.sheep_item": "Sheep",
   "item.pokez.wolf_item": "Wolf",
-  "itemGroup.Pokemon Animals": "Pokemon Animals"
+  "itemGroup.Pokemon Animals": "Pokemon Animals",
+  "itemGroup.Pokemon Blocks": "Pokemon Blocks"
 }

@@ -4,6 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.LanguageProvider;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.items.PokemonAnimalItem;
+import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.setup.Registration;
 
 public class ModLanguageProvider extends LanguageProvider {
@@ -16,6 +17,7 @@ public class ModLanguageProvider extends LanguageProvider {
 	@Override
 	protected void addTranslations() {
 		add("itemGroup." + PokemonAnimalItem.TAB_NAME, PokemonAnimalItem.TAB_NAME);
+		add("itemGroup." + PokemonBlockItem.TAB_NAME, PokemonBlockItem.TAB_NAME);
 		
 		add(Registration.Bee_Item.get(), "Bee");
 		add(Registration.Cat_Item.get(), "Cat");
@@ -28,8 +30,8 @@ public class ModLanguageProvider extends LanguageProvider {
 		add(Registration.Rabbit_Item.get(), "Rabbit");
 		add(Registration.Sheep_Item.get(), "Sheep");
 		add(Registration.Wolf_Item.get(), "Wolf");
-		add(Registration.Pokeball_Block_Item.get(), "Pokeball Block");
-		
+		add(Registration.Pokeball_Red_Block_Item.get(), "Red Pokeball Block");	
+		add(Registration.Pokeball_Green_Block_Item.get(), "Green Pokeball Block");	
+		add(Registration.Pokeball_Blue_Block_Item.get(), "Blue Pokeball Block");	
 	}
-
 }
