@@ -30,10 +30,18 @@ _(macos)_
 
 Download the [installer](https://download.jetbrains.com/idea/ideaIC-2021.3.2.dmg) and install manually.
 
+_(ubuntu)_
+
+```bash
+sudo snap install intellij-idea-community --classic --channel=2021.3
+```
+
 ### First run
 
-Open this repository with IntelliJ IDEA, and launch the gradle task `genIntellijRuns`. _(See IntelliJ IDEA's [documentation](https://www.jetbrains.com/help/idea/work-with-gradle-tasks.html) about gradle integrations)_
+Open this repository with IntelliJ IDEA. Upon visiting the project, the IDE should discover the project's gradle configurations and spend a few minutes configuring itself for the first time.
 
-This task will generate the following run configurations: `runClient`, `runServer` and `runData`. 
+Once ready, launch the gradle task `genIntellijRuns`. This task will generate the following run configurations: `runClient`, `runServer` and `runData`. 
+
+_(See IntelliJ IDEA's [documentation](https://www.jetbrains.com/help/idea/work-with-gradle-tasks.html) about gradle integrations)_
 
 Running the configuration `runClient` will start up instance of mod.
