@@ -8,4 +8,5 @@ The following checklist should be used during code reviews:
 - [ ] Code is readable and maintainable.
   - [ ] functions are introduced with accompanying documentations.
   - [ ] functions and variables are introduced with properly describing names. 
+- [ ] Code comments follow best practices.
 - [ ] Code reuses existing code when possible.
