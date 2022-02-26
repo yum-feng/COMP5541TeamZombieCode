@@ -31,7 +31,7 @@ public class ModLanguageProvider extends LanguageProvider {
 		add(Registration.Wolf_Item.get(), "Wolf");
 		
 		add("itemGroup." + PokeballItem.TAB_NAME, PokeballItem.TAB_NAME);
-		add(Registration.Pokeball.get(), "Pokeball");
+		add(Registration.Red_Pokeball.get(), "Pokeball");
 		add(Registration.Blue_Pokeball.get(), "Blue_Pokeball");
 		add(Registration.Green_Pokeball.get(), "Green_Pokeball");
 	}

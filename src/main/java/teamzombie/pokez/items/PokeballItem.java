@@ -47,7 +47,7 @@ public class PokeballItem extends Item{
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
 		@Override
 		public ItemStack makeIcon() { 
-			return new ItemStack (Registration.Pokeball.get()); 
+			return new ItemStack (Registration.Red_Pokeball.get()); 
 		};
 	};	
 	
