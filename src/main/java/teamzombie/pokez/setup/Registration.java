@@ -1,6 +1,8 @@
 
 package teamzombie.pokez.setup;
 
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,6 +15,7 @@ import teamzombie.pokez.items.PokeBallItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
+import teamzombie.pokez.projectile.PokeBall;
 
 /*+----------------------------------------------------------------------
 ||
@@ -41,11 +44,14 @@ public class Registration {
 	// Registries for blocks and items
 	private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PokeZ.MODID);
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PokeZ.MODID);
+	private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, PokeZ.MODID);
+
 
 	public static void init() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BLOCKS.register(bus);
-		ITEMS.register(bus);	
+		ITEMS.register(bus);
+		ENTITIES.register(bus);
 	}
 	
 	// Registering pokemon animal items
@@ -60,8 +66,7 @@ public class Registration {
 	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
-	
-	
+
 	//Registering pokeball items
 	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeBallItem());
 	public static final RegistryObject<Item> Green_PokeBall = ITEMS.register("green_pokeball", () -> new PokeBallItem());
@@ -75,4 +80,7 @@ public class Registration {
 	public static final RegistryObject<Item> Green_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_green_block", () -> new PokemonBlockItem(Green_Pokeball_Ore_Block.get()));
 	public static final RegistryObject<Block> Blue_Pokeball_Ore_Block = BLOCKS.register("pokeball_blue_block", () -> new PokeballOreBlock());
 	public static final RegistryObject<Item> Blue_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_blue_block", () -> new PokemonBlockItem(Blue_Pokeball_Ore_Block.get()));
+
+	// Entities
+	public static final RegistryObject<EntityType<PokeBall>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<PokeBall>of(PokeBall::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
 }
