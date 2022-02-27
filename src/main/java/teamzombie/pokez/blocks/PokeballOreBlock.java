@@ -31,15 +31,15 @@ import teamzombie.pokez.PokeZ;
 ||
 ++-----------------------------------------------------------------------*/
 
-public class PokeballBlock extends Block {
+public class PokeballOreBlock extends Block {
 
 	// Default constructor
-	public PokeballBlock(Properties props) {
+	public PokeballOreBlock(Properties props) {
 		super(props);
 	}
 	
 	// New class constructor (class block properties)
-	public PokeballBlock() {
+	public PokeballOreBlock() {
 		super(BLOCK_PROPERTIES);
 	}
 	

@@ -40,7 +40,7 @@ public class PokemonAnimalItem extends Item {
 		super(ITEM_PROPERTIES);
 	}
 	
-	public static final String TAB_NAME = "Pokemon Animals";
+	public static final String TAB_NAME = "Pokebies";
 	public static final Tags.IOptionalNamedTag<Item> POKEMON_ANIMAL_ITEM = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokemon_animal"));
 	
 	// Define creative mode tab for pokemon animals

@@ -17,9 +17,9 @@ public class ModItemModels extends ItemModelProvider {
 	protected void registerModels() {
 		
 		// Model json generation for blocks
-		withExistingParent(Registration.Pokeball_Red_Block_Item.get().getRegistryName().getPath(), modLoc("block/pokeball_red_block"));
-		withExistingParent(Registration.Pokeball_Green_Block_Item.get().getRegistryName().getPath(), modLoc("block/pokeball_green_block"));
-		withExistingParent(Registration.Pokeball_Blue_Block_Item.get().getRegistryName().getPath(), modLoc("block/pokeball_blue_block"));
+		withExistingParent(Registration.Red_Pokeball_Ore_Block_Item.get().getRegistryName().getPath(), modLoc("block/pokeball_red_block"));
+		withExistingParent(Registration.Green_Pokeball_Ore_Block_Item.get().getRegistryName().getPath(), modLoc("block/pokeball_green_block"));
+		withExistingParent(Registration.Blue_Pokeball_Ore_Block_Item.get().getRegistryName().getPath(), modLoc("block/pokeball_blue_block"));
 
 	
 		// Model json generation for pokemon animal items

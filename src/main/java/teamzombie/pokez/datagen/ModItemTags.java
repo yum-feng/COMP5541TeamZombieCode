@@ -30,9 +30,9 @@ public class ModItemTags extends ItemTagsProvider {
 			.add(Registration.Sheep_Item.get())
 			.add(Registration.Wolf_Item.get());
 		tag(PokemonBlockItem.POKEMON_BLOCK_ITEM)
-			.add(Registration.Pokeball_Red_Block_Item.get())
-			.add(Registration.Pokeball_Green_Block_Item.get())
-			.add(Registration.Pokeball_Blue_Block_Item.get());
+			.add(Registration.Red_Pokeball_Ore_Block_Item.get())
+			.add(Registration.Green_Pokeball_Ore_Block_Item.get())
+			.add(Registration.Blue_Pokeball_Ore_Block_Item.get());
 	}
 	
 	@Override 

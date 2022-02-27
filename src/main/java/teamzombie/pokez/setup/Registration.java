@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
-import teamzombie.pokez.blocks.PokeballBlock;
+import teamzombie.pokez.blocks.PokeballOreBlock;
 
 /*+----------------------------------------------------------------------
 ||
@@ -60,10 +60,10 @@ public class Registration {
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
 	// Registering pokemon blocks and block items
-	public static final RegistryObject<Block> Pokeball_Red_Block = BLOCKS.register("pokeball_red_block", () -> new PokeballBlock());
-	public static final RegistryObject<Item> Pokeball_Red_Block_Item = ITEMS.register("pokeball_red_block", () -> new PokemonBlockItem(Pokeball_Red_Block.get()));
-	public static final RegistryObject<Block> Pokeball_Green_Block = BLOCKS.register("pokeball_green_block", () -> new PokeballBlock());
-	public static final RegistryObject<Item> Pokeball_Green_Block_Item = ITEMS.register("pokeball_green_block", () -> new PokemonBlockItem(Pokeball_Green_Block.get()));
-	public static final RegistryObject<Block> Pokeball_Blue_Block = BLOCKS.register("pokeball_blue_block", () -> new PokeballBlock());
-	public static final RegistryObject<Item> Pokeball_Blue_Block_Item = ITEMS.register("pokeball_blue_block", () -> new PokemonBlockItem(Pokeball_Blue_Block.get()));
+	public static final RegistryObject<Block> Red_Pokeball_Ore_Block = BLOCKS.register("pokeball_red_block", () -> new PokeballOreBlock());
+	public static final RegistryObject<Item> Red_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_red_block", () -> new PokemonBlockItem(Red_Pokeball_Ore_Block.get()));
+	public static final RegistryObject<Block> Green_Pokeball_Ore_Block = BLOCKS.register("pokeball_green_block", () -> new PokeballOreBlock());
+	public static final RegistryObject<Item> Green_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_green_block", () -> new PokemonBlockItem(Green_Pokeball_Ore_Block.get()));
+	public static final RegistryObject<Block> Blue_Pokeball_Ore_Block = BLOCKS.register("pokeball_blue_block", () -> new PokeballOreBlock());
+	public static final RegistryObject<Item> Blue_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_blue_block", () -> new PokemonBlockItem(Blue_Pokeball_Ore_Block.get()));
 }

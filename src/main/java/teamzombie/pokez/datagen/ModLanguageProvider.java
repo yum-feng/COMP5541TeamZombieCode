@@ -30,8 +30,8 @@ public class ModLanguageProvider extends LanguageProvider {
 		add(Registration.Rabbit_Item.get(), "Rabbit");
 		add(Registration.Sheep_Item.get(), "Sheep");
 		add(Registration.Wolf_Item.get(), "Wolf");
-		add(Registration.Pokeball_Red_Block_Item.get(), "Red Pokeball Block");	
-		add(Registration.Pokeball_Green_Block_Item.get(), "Green Pokeball Block");	
-		add(Registration.Pokeball_Blue_Block_Item.get(), "Blue Pokeball Block");	
+		add(Registration.Red_Pokeball_Ore_Block_Item.get(), "Red Pokeball Ore");	
+		add(Registration.Green_Pokeball_Ore_Block_Item.get(), "Green Pokeball Ore");	
+		add(Registration.Blue_Pokeball_Ore_Block_Item.get(), "Blue Pokeball Ore");	
 	}
 }

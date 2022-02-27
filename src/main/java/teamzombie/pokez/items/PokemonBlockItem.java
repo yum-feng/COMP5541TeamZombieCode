@@ -50,7 +50,7 @@ public class PokemonBlockItem extends BlockItem {
 		@Override
 		public ItemStack makeIcon() { 
 			// Use our registered pokeball block item as tab icon
-			return new ItemStack (Registration.Pokeball_Red_Block_Item.get()); 
+			return new ItemStack (Registration.Red_Pokeball_Ore_Block_Item.get()); 
 		};
 	};
 	

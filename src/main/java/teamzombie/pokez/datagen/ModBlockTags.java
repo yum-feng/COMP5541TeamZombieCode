@@ -4,7 +4,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import teamzombie.pokez.PokeZ;
-import teamzombie.pokez.blocks.PokeballBlock;
+import teamzombie.pokez.blocks.PokeballOreBlock;
 import teamzombie.pokez.setup.Registration;
 
 public class ModBlockTags extends BlockTagsProvider {
@@ -16,10 +16,10 @@ public class ModBlockTags extends BlockTagsProvider {
 	@Override
 	protected void addTags() {
 
-		tag(PokeballBlock.POKEBALL_BLOCK_TAG)
-			.add(Registration.Pokeball_Red_Block.get())
-			.add(Registration.Pokeball_Green_Block.get())
-			.add(Registration.Pokeball_Blue_Block.get());
+		tag(PokeballOreBlock.POKEBALL_BLOCK_TAG)
+			.add(Registration.Red_Pokeball_Ore_Block.get())
+			.add(Registration.Green_Pokeball_Ore_Block.get())
+			.add(Registration.Blue_Pokeball_Ore_Block.get());
 	}
 	
 	@Override 
