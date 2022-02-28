@@ -15,39 +15,39 @@ import teamzombie.pokez.setup.Registration;
 ||  Class PokemonAnimalItem
 ||
 ||
-||        Purpose:  This class is the base class for our Pokeball
+||        Purpose:  This class is the base class for our PokeBall
 ||					items. It is used to add overall features to the
-||					pokeball items. 
+||					PokeBall items.
 ||
 ||  Inherits From:  Inherits from the forge Item class
 
 ||
 |+-----------------------------------------------------------------------
 ||
-||      Features:  Added the tab property for the Pokeballs
+||      Features:  Added the tab property for the PokeBalls
 ||
 ++-----------------------------------------------------------------------*/
-public class PokeballItem extends Item{
+public class PokeBallItem extends Item{
 
-	public PokeballItem(Properties props) {
+	public PokeBallItem(Properties props) {
 		super(props.tab(ITEM_GROUP));
 	}
 	
-	public PokeballItem() {
+	public PokeBallItem() {
 		super(ITEM_PROPERTIES.tab(ITEM_GROUP));
 	}
 	
-	public static final String TAB_NAME = "Pokeballs";
-	public static final Tags.IOptionalNamedTag<Item> POKEMON_BALLS = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokeball"));
+	public static final String TAB_NAME = "PokeBalls";
+	public static final Tags.IOptionalNamedTag<Item> POKEBALL = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokeball"));
 	
-	//basic properties of pokeball item
+	//basic properties of PokeBall item
 	private static final Item.Properties ITEM_PROPERTIES = new Item.Properties(); 
 	
-	// Define creative mode tab for pokeball animals
+	// Define creative mode tab for PokeBall animals
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
 		@Override
 		public ItemStack makeIcon() { 
-			return new ItemStack (Registration.Red_Pokeball.get()); 
+			return new ItemStack (Registration.Red_PokeBall.get());
 		};
 	};	
 	

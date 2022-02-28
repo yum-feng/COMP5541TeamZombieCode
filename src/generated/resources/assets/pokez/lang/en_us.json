@@ -1,18 +1,18 @@
 {
   "item.pokez.bee_item": "Bee",
+  "item.pokez.blue_pokeball": "Blue PokeBall",
   "item.pokez.cat_item": "Cat",
   "item.pokez.chicken_item": "Chicken",
   "item.pokez.cow_item": "Cow",
   "item.pokez.donkey_item": "Donkey",
   "item.pokez.fox_item": "Fox",
   "item.pokez.goat_item": "Goat",
+  "item.pokez.green_pokeball": "Green PokeBall",
   "item.pokez.pig_item": "Pig",
   "item.pokez.rabbit_item": "Rabbit",
+  "item.pokez.red_pokeball": "Red PokeBall",
   "item.pokez.sheep_item": "Sheep",
   "item.pokez.wolf_item": "Wolf",
+  "itemGroup.PokeBalls": "PokeBalls",
   "itemGroup.Pokemon Animals": "Pokemon Animals"
-  "item.pokez.red_pokeball": "Red Pokeball",
-  "item.pokez.green_pokeball": "Blue_Pokeball",
-  "item.pokez.blue_pokeball": "Green_Pokeball",
-  "itemGroup.Pokeballs": "Pokeballs"
 }
