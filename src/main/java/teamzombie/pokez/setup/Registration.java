@@ -9,6 +9,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.items.PokemonAnimalItem;
+import teamzombie.pokez.items.PokemonBlockItem;
+import teamzombie.pokez.blocks.PokeballOreBlock;
 
 /*+----------------------------------------------------------------------
 ||
@@ -41,8 +43,7 @@ public class Registration {
 	public static void init() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BLOCKS.register(bus);
-		ITEMS.register(bus);
-		
+		ITEMS.register(bus);	
 	}
 	
 	// Registering pokemon animal items
@@ -58,5 +59,11 @@ public class Registration {
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
-	
+	// Registering pokemon blocks and block items
+	public static final RegistryObject<Block> Red_Pokeball_Ore_Block = BLOCKS.register("pokeball_red_block", () -> new PokeballOreBlock());
+	public static final RegistryObject<Item> Red_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_red_block", () -> new PokemonBlockItem(Red_Pokeball_Ore_Block.get()));
+	public static final RegistryObject<Block> Green_Pokeball_Ore_Block = BLOCKS.register("pokeball_green_block", () -> new PokeballOreBlock());
+	public static final RegistryObject<Item> Green_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_green_block", () -> new PokemonBlockItem(Green_Pokeball_Ore_Block.get()));
+	public static final RegistryObject<Block> Blue_Pokeball_Ore_Block = BLOCKS.register("pokeball_blue_block", () -> new PokeballOreBlock());
+	public static final RegistryObject<Item> Blue_Pokeball_Ore_Block_Item = ITEMS.register("pokeball_blue_block", () -> new PokemonBlockItem(Blue_Pokeball_Ore_Block.get()));
 }

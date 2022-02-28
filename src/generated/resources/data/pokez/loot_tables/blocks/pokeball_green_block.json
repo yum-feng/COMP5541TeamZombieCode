@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "name": "pokeball_green_block",
+      "rolls": 1.0,
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": [
+                      "minecraft:diamond_pickaxe"
+                    ]
+                  }
+                }
+              ],
+              "name": "minecraft:redstone"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "pokez:pokeball_green_block"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
