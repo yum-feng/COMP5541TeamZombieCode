@@ -1,4 +1,7 @@
 {
+  "block.pokez.pokeball_blue_block": "Blue Pokeball Ore",
+  "block.pokez.pokeball_green_block": "Green Pokeball Ore",
+  "block.pokez.pokeball_red_block": "Red Pokeball Ore",
   "item.pokez.bee_item": "Bee",
   "item.pokez.blue_pokeball": "Blue PokeBall",
   "item.pokez.cat_item": "Cat",
@@ -15,4 +18,6 @@
   "item.pokez.wolf_item": "Wolf",
   "itemGroup.PokeBalls": "PokeBalls",
   "itemGroup.Pokemon Animals": "Pokemon Animals"
+  "itemGroup.Pokebies": "Pokebies",
+  "itemGroup.Pokemon Blocks": "Pokemon Blocks"
 }
