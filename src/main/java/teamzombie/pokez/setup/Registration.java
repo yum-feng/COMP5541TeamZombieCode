@@ -9,7 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
-import teamzombie.pokez.items.PokeballItem;
+import teamzombie.pokez.items.PokeBallItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 
 /*+----------------------------------------------------------------------
@@ -62,8 +62,8 @@ public class Registration {
 	
 	
 	//Registering pokeball items
-	public static final RegistryObject<Item> Red_Pokeball = ITEMS.register("red_pokeball", () -> new PokeballItem());
-	public static final RegistryObject<Item> Green_Pokeball = ITEMS.register("green_pokeball", () -> new PokeballItem());
-	public static final RegistryObject<Item> Blue_Pokeball = ITEMS.register("blue_pokeball", () -> new PokeballItem());
+	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeBallItem());
+	public static final RegistryObject<Item> Green_PokeBall = ITEMS.register("green_pokeball", () -> new PokeBallItem());
+	public static final RegistryObject<Item> Blue_PokeBall = ITEMS.register("blue_pokeball", () -> new PokeBallItem());
 	
 }
