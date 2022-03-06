@@ -34,6 +34,9 @@ public class ModItemModels extends ItemModelProvider {
 		singleTexture(Registration.Rabbit_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/rabbit_item"));
 		singleTexture(Registration.Sheep_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/sheep_item"));
 		singleTexture(Registration.Wolf_Item.get().getRegistryName().getPath(), mcLoc("item/generated"), "layer0", modLoc("item/wolf_item"));
+		singleTexture(Registration.Red_PokeBall.get().getRegistryName().getPath(),mcLoc("item/generated"),"layer0",modLoc("item/red_pokeball"));
+		singleTexture(Registration.Green_PokeBall.get().getRegistryName().getPath(),mcLoc("item/generated"),"layer0",modLoc("item/green_pokeball"));
+		singleTexture(Registration.Blue_PokeBall.get().getRegistryName().getPath(),mcLoc("item/generated"),"layer0",modLoc("item/blue_pokeball"));
 	};
 	
 	

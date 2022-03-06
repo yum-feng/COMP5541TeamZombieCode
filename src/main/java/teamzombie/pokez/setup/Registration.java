@@ -1,3 +1,4 @@
+
 package teamzombie.pokez.setup;
 
 import net.minecraft.world.item.Item;
@@ -8,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.items.PokeBallItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
@@ -58,6 +60,13 @@ public class Registration {
 	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
+	
+	
+	//Registering pokeball items
+	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeBallItem());
+	public static final RegistryObject<Item> Green_PokeBall = ITEMS.register("green_pokeball", () -> new PokeBallItem());
+	public static final RegistryObject<Item> Blue_PokeBall = ITEMS.register("blue_pokeball", () -> new PokeBallItem());
+	
 
 	// Registering pokemon blocks and block items
 	public static final RegistryObject<Block> Red_Pokeball_Ore_Block = BLOCKS.register("pokeball_red_block", () -> new PokeballOreBlock());
