@@ -31,7 +31,7 @@ public class ModItemTags extends ItemTagsProvider {
 			.add(Registration.Sheep_Item.get())
 			.add(Registration.Wolf_Item.get());
 		
-		tag(PokeBallItem.POKEBALL)
+		tag(PokeBallItem.POKEMON_BALLS)
 		    .add(Registration.Red_PokeBall.get())
 		    .add(Registration.Green_PokeBall.get())
 		    .add(Registration.Blue_PokeBall.get());
