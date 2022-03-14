@@ -45,3 +45,27 @@ Once ready, launch the gradle task `genIntellijRuns`. This task will generate th
 _(See IntelliJ IDEA's [documentation](https://www.jetbrains.com/help/idea/work-with-gradle-tasks.html) about gradle integrations)_
 
 Running the configuration `runClient` will start up instance of mod.
+
+## Build and release
+
+### preparation
+
+1. Adjust the versioning in `/build.gradle` file and commit the changes.
+1. Tag the commit and push the tag onto remote:
+
+```shell
+git tag ${version}
+git push origin ${version}
+```
+
+### building
+
+1. Run `gradle build` to produce the mod file will be found in `/build/libs/`.
+
+### releasing
+
+1. [Draft a release on GitHub](https://github.com/yum-feng/COMP5541TeamZombieCode/releases/new).
+   1. Attach the jar file from `/build/libs/`.
+   1. Select the `${version}` as the tag.
+   1. Populate the release title with the `${version}`.
+   1. (Optional) List important PRs in the release's description.
