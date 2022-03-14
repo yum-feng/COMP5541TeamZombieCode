@@ -45,6 +45,7 @@ public class PokeBall extends ThrowableItemProjectile {
         super.onHitEntity(ehr);
         Entity entity = ehr.getEntity();
         System.out.println(entity.getName().getString());
+        entity.kill();
     }
 
     protected void onHit(HitResult r) {

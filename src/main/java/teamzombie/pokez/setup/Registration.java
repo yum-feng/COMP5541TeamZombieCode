@@ -1,4 +1,3 @@
-
 package teamzombie.pokez.setup;
 
 import net.minecraft.world.entity.EntityType;
