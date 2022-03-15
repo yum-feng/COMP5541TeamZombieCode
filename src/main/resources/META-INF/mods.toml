@@ -25,7 +25,7 @@ modId="pokez" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="${file.jarVersion}" #mandatory
+version="1.0" #mandatory
 
  # A display name for the mod
 displayName="Poke Z" #mandatory
@@ -43,15 +43,13 @@ displayName="Poke Z" #mandatory
 credits="Thanks for the Poke Z mod goes to the whole COMP5541 zombie team" #optional
 
 # A text field displayed in the mod UI
-authors="Input names here..." #optional
+authors="Adam Pearson, August Feng, Adriana Danko, Christopher Savov, Nicolas Pascuas, Mike Poullas, Vera Tsiuzhankina, Olga Garcia & Thi Ngoc Hop Nguyen" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-This is a long form description of the mod. You can write whatever you want here
+Team Zombie has developed a simple Pokemon mod in Minecarft that bring the main concept of Pokemon game into the MC world.
 
-Have some lorem ipsum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+The player is able to catch different Pokemons by throwing a Pokeball at them. There are options on how to obtain the Pokeball item (either by crafting it or mining it) as well as using it catch pokemon.
 '''
 
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
