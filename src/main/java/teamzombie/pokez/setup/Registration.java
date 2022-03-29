@@ -15,6 +15,7 @@ import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
 import teamzombie.pokez.projectile.PokeBall;
+import teamzombie.pokez.projectile.PokeAnimal;
 
 /*+----------------------------------------------------------------------
 ||
@@ -82,4 +83,5 @@ public class Registration {
 
 	// Entities
 	public static final RegistryObject<EntityType<PokeBall>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<PokeBall>of(PokeBall::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
+	public static final RegistryObject<EntityType<PokeAnimal>> POKEANIMAL_ENTITY = ENTITIES.register("pokeanimal_entity", () -> EntityType.Builder.<PokeAnimal>of(PokeAnimal::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeanimal_entity"));
 }

@@ -14,5 +14,6 @@ public class EventHandlers {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(Registration.POKEBALL_ENTITY.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(Registration.POKEANIMAL_ENTITY.get(), ThrownItemRenderer::new);
     }
 }
