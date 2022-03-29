@@ -43,7 +43,6 @@ public class PokemonBlockItem extends BlockItem {
 	}
 	
 	public static final String TAB_NAME = "Pokemon Blocks";
-	public static final Tags.IOptionalNamedTag<Item> POKEMON_BLOCK_ITEM = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokemon_block"));
 
 	// Define creative mode tab for pokemon blocks
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {

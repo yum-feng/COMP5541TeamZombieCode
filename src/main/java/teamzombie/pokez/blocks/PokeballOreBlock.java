@@ -42,10 +42,7 @@ public class PokeballOreBlock extends Block {
 	public PokeballOreBlock() {
 		super(BLOCK_PROPERTIES);
 	}
-	
-	// Pokeball block tag
-	public static final Tags.IOptionalNamedTag<Block> POKEBALL_BLOCK_TAG = BlockTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokeball_block"));
-	
+
 	// Light level of the block
 	private static ToIntFunction<BlockState> lightLevel = BlockState -> 5;
 	
