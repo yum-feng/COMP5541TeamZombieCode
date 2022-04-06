@@ -18,5 +18,6 @@
   "item.pokez.wolf_item": "Wolf",
   "itemGroup.Pokeballs": "Pokeballs",
   "itemGroup.Pokebies": "Pokebies",
-  "itemGroup.Pokemon Blocks": "Pokemon Blocks"
+  "itemGroup.Pokemon Blocks": "Pokemon Blocks",
+  "entity.pokez.pikachu_entity": "Pikachu"
 }

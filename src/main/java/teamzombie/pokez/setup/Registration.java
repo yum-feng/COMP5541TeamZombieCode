@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
-import teamzombie.pokez.entities.Pikachu_Entity;
+import teamzombie.pokez.entities.pikachu_entity;
 import teamzombie.pokez.items.PokeBallItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
@@ -83,5 +83,5 @@ public class Registration {
 
 	// Entities
 	public static final RegistryObject<EntityType<PokeBall>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<PokeBall>of(PokeBall::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
-	public static final RegistryObject<EntityType<Pikachu_Entity>> PIKACHU_ENTITY = ENTITIES.register("pikachu", () -> EntityType.Builder.of(Pikachu_Entity::new, MobCategory.CREATURE).sized(0.8f, 0.6f).clientTrackingRange(4).updateInterval(10).build("pikachu"));
+	public static final RegistryObject<EntityType<pikachu_entity>> PIKACHU_ENTITY = ENTITIES.register("pikachu", () -> EntityType.Builder.of(pikachu_entity::new, MobCategory.CREATURE).sized(0.8f, 0.6f).clientTrackingRange(4).updateInterval(10).build("pikachu"));
 }
