@@ -7,7 +7,7 @@ import teamzombie.pokez.PokeZ;
 
 public class pikachu_entity_renderer<Type extends pikachu_entity> extends MobRenderer<Type, pikachu_entity_model<Type>> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(PokeZ.MODID, "textures/entity/pikachu_entity.png");
+    private static final ResourceLocation TEXTURE = new ResourceLocation(PokeZ.MODID, "assets/pokez/textures/entity/pikachu_entity.png");
 
     public pikachu_entity_renderer(EntityRendererProvider.Context context) {
         super(context, new pikachu_entity_model<>(context.bakeLayer(pikachu_entity_model.LAYER_LOCATION)), 0.5f);

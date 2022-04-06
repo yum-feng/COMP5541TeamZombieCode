@@ -83,5 +83,5 @@ public class Registration {
 
 	// Entities
 	public static final RegistryObject<EntityType<PokeBall>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<PokeBall>of(PokeBall::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
-	public static final RegistryObject<EntityType<pikachu_entity>> PIKACHU_ENTITY = ENTITIES.register("pikachu", () -> EntityType.Builder.of(pikachu_entity::new, MobCategory.CREATURE).sized(0.8f, 0.6f).clientTrackingRange(4).updateInterval(10).build("pikachu"));
+	public static final RegistryObject<EntityType<pikachu_entity>> PIKACHU_ENTITY = ENTITIES.register("pikachu_entity", () -> EntityType.Builder.of(pikachu_entity::new, MobCategory.CREATURE).sized(0.8f, 0.6f).clientTrackingRange(4).updateInterval(10).build("pikachu_entity"));
 }
