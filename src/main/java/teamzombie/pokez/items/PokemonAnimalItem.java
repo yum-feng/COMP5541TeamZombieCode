@@ -1,12 +1,19 @@
 package teamzombie.pokez.items;
 
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.Tags;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.projectile.PokeAnimal;
 import teamzombie.pokez.setup.Registration;
 
 /*+----------------------------------------------------------------------
@@ -39,7 +46,17 @@ public class PokemonAnimalItem extends Item {
 	public PokemonAnimalItem() {
 		super(ITEM_PROPERTIES);
 	}
-	
+	public InteractionResultHolder<ItemStack> use(Level l, Player p, InteractionHand ih) { //https://forums.minecraftforge.net/topic/103660-1171-custom-fishing-rod-doesnt-cast/
+		ItemStack itemstack = p.getItemInHand(ih);
+		l.playSound((Player)null, p.getX(), p.getY(), p.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (l.getRandom().nextFloat() * 0.4F + 0.8F));
+		if (!l.isClientSide) {
+			PokeAnimal pokeanimal = new PokeAnimal(l, p);
+			pokeanimal.setItem(itemstack);
+			pokeanimal.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 1.5F, 1.0F);
+			l.addFreshEntity(pokeanimal);
+		}
+		return InteractionResultHolder.sidedSuccess(itemstack, l.isClientSide());
+	}
 	public static final String TAB_NAME = "Pokebies";
 	public static final Tags.IOptionalNamedTag<Item> POKEMON_ANIMAL_ITEM = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokemon_animal"));
 	
