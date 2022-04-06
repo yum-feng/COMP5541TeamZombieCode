@@ -10,7 +10,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
-import teamzombie.pokez.items.PokeballItem;
+import teamzombie.pokez.entities.Pikachu_Entity;
+import teamzombie.pokez.items.PokeBallItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
@@ -23,7 +24,7 @@ import teamzombie.pokez.projectile.ThrowablePokemonItem;
 ||
 ||         Author:  Adam Pearson
 ||
-||        Purpose:  This class is used to register all our items, blocks 
+||        Purpose:  This class is used to register all our items, blocks
 ||					and entities for our pokez mod.
 ||
 |+-----------------------------------------------------------------------
@@ -32,15 +33,15 @@ import teamzombie.pokez.projectile.ThrowablePokemonItem;
 ||
 |+-----------------------------------------------------------------------
 ||
-||  Class Methods:  
+||  Class Methods:
 ||
-||		init(): Should be called by main mod class to initiate 
+||		init(): Should be called by main mod class to initiate
 ||				the registration
 ||
 ++-----------------------------------------------------------------------*/
 
 public class Registration {
-	
+
 	// Registries for blocks and items
 	private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PokeZ.MODID);
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PokeZ.MODID);
@@ -52,7 +53,7 @@ public class Registration {
 		ITEMS.register(bus);
 		ENTITIES.register(bus);
 	}
-	
+
 	// Registering pokemon animal items
 	public static final RegistryObject<Item> Bee_Item = ITEMS.register("bee_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Cat_Item = ITEMS.register("cat_item", () -> new PokemonAnimalItem());
