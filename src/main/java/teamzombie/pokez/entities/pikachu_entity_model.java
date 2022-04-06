@@ -11,7 +11,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import teamzombie.pokez.PokeZ;
 
-public class pikachu_entity_model<T extends Entity> extends EntityModel<T> {
+public class pikachu_entity_model<T extends pikachu_entity> extends EntityModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(PokeZ.MODID, "pikachu_entity"), "main");
 	private final ModelPart bb_main;
 
@@ -56,6 +56,6 @@ public class pikachu_entity_model<T extends Entity> extends EntityModel<T> {
 
 	@Override
 	public void renderToBuffer(PoseStack poseStack, VertexConsumer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-		bb_main.render(poseStack, buffer, packedLight, packedOverlay);
+		this.bb_main.render(poseStack, buffer, packedLight, packedOverlay);
 	}
 }
