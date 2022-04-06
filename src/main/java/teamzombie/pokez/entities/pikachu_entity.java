@@ -9,17 +9,12 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.util.LazyOptional;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import teamzombie.pokez.setup.Registration;
 
-public class Pikachu_Entity extends Animal {
-    public Pikachu_Entity(EntityType<? extends Animal> entityType, Level level) {
+public class pikachu_entity extends Animal {
+    public pikachu_entity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -39,12 +34,7 @@ public class Pikachu_Entity extends Animal {
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH, 20.0D).add(Attributes.MOVEMENT_SPEED, 0.25D);
     }
-   /* @NotNull
-    @Override
-    public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
-        return super.getCapability(cap);
-    }
-*/
+
     @Override
     public AgeableMob getBreedOffspring(ServerLevel level, AgeableMob parent) {
         return Registration.PIKACHU_ENTITY.get().create(level);

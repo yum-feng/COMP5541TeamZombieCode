@@ -10,7 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
-import teamzombie.pokez.entities.Pikachu_Entity;
+import teamzombie.pokez.entities.pikachu_entity;
 import teamzombie.pokez.items.PokeBallItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;

@@ -3,7 +3,6 @@ package teamzombie.pokez.entities;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.model.EntityModel;
-import net.minecraft.client.model.Model;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
@@ -12,11 +11,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import teamzombie.pokez.PokeZ;
 
-public class Pikachu_Entity_Model<T extends Entity> extends EntityModel<T> {
+public class pikachu_entity_model<T extends Entity> extends EntityModel<T> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(PokeZ.MODID, "pikachu_entity"), "main");
 	private final ModelPart bb_main;
 
-	public Pikachu_Entity_Model(ModelPart root) {
+	public pikachu_entity_model(ModelPart root) {
 		this.bb_main = root.getChild("bb_main");
 	}
 
