@@ -92,7 +92,6 @@ public class Registration {
 				return curItem;
 			}
 		}
-
 		return null;
 	}
 }

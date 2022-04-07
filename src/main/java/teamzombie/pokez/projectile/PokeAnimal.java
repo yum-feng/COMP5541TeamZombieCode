@@ -61,7 +61,10 @@ public class PokeAnimal extends ThrowableItemProjectile {
             if (r.getType() == HitResult.Type.BLOCK){
                 BlockHitResult bhr = (BlockHitResult)r;
                 BlockPos bp = bhr.getBlockPos().above();
-                var entityType = EntityType.byString("cow");
+                String registryName = this.getItem().getItem().getRegistryName().toString();
+                String animalItemName = registryName.substring(registryName.indexOf(":") + 1, registryName.indexOf("_"));
+
+                var entityType = EntityType.byString(animalItemName);
 
                 var newPokemon = entityType.get().spawn((ServerLevel)this.getLevel(), null, null, bp, MobSpawnType.SPAWN_EGG,false, false);
                 if(newPokemon == null){

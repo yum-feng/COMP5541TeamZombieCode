@@ -54,6 +54,7 @@ public class PokemonAnimalItem extends Item {
 			pokeanimal.setItem(itemstack);
 			pokeanimal.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 1.5F, 1.0F);
 			l.addFreshEntity(pokeanimal);
+			itemstack.shrink(1);
 		}
 		return InteractionResultHolder.sidedSuccess(itemstack, l.isClientSide());
 	}
