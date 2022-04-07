@@ -38,9 +38,7 @@ public class PokeAnimal extends ThrowableItemProjectile {
 
     public void handleEntityEvent(byte b) {
         if (b == 3) {
-
             ParticleOptions po = ParticleTypes.EXPLOSION;
-
             for(int i = 0; i < 8; ++i) {
                 this.level.addParticle(po, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
             }
@@ -49,9 +47,9 @@ public class PokeAnimal extends ThrowableItemProjectile {
 
     protected void onHitEntity(EntityHitResult ehr) {
         super.onHitEntity(ehr);
-        Entity entity = ehr.getEntity();
-        System.out.println(entity.getName().getString());
-        entity.kill();
+//        Entity entity = ehr.getEntity();
+//        System.out.println(entity.getName().getString());
+//        entity.kill();
     }
 
     protected void onHit(HitResult r) {
@@ -62,9 +60,10 @@ public class PokeAnimal extends ThrowableItemProjectile {
 
             if (r.getType() == HitResult.Type.BLOCK){
                 BlockHitResult bhr = (BlockHitResult)r;
-                BlockPos bp = bhr.getBlockPos();
-                EntityType<?> entityType = EntityType.COW;
-                var newPokemon = entityType.spawn((ServerLevel)this.getLevel(), null, null, bp, MobSpawnType.SPAWN_EGG,false, false);
+                BlockPos bp = bhr.getBlockPos().above();
+                var entityType = EntityType.byString("cow");
+
+                var newPokemon = entityType.get().spawn((ServerLevel)this.getLevel(), null, null, bp, MobSpawnType.SPAWN_EGG,false, false);
                 if(newPokemon == null){
                     System.out.println("spawn did not work");
                 }else{

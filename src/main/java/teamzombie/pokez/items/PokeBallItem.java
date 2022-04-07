@@ -50,6 +50,7 @@ public class PokeBallItem extends Item{
 			pokeball.setItem(itemstack);
 			pokeball.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 1.5F, 1.0F);
 			l.addFreshEntity(pokeball);
+			itemstack.shrink(1);
 		}
 		return InteractionResultHolder.sidedSuccess(itemstack, l.isClientSide());
 	}

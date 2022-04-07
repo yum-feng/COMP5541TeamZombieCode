@@ -3,7 +3,6 @@ package teamzombie.pokez.setup;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -17,8 +16,6 @@ import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
 import teamzombie.pokez.projectile.PokeBall;
 import teamzombie.pokez.projectile.PokeAnimal;
-
-import java.util.Locale;
 
 /*+----------------------------------------------------------------------
 ||
