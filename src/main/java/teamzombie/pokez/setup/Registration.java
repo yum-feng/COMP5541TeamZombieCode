@@ -69,13 +69,10 @@ public class Registration {
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
-
-
 	//Registering pokeball items
 	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeBallItem());
 	public static final RegistryObject<Item> Green_PokeBall = ITEMS.register("green_pokeball", () -> new PokeBallItem());
 	public static final RegistryObject<Item> Blue_PokeBall = ITEMS.register("blue_pokeball", () -> new PokeBallItem());
-	
 
 	// Registering pokemon blocks and block items
 	public static final RegistryObject<Block> Red_Pokeball_Ore_Block = BLOCKS.register("pokeball_red_block", () -> new PokeballOreBlock());
@@ -89,14 +86,12 @@ public class Registration {
 	public static final RegistryObject<EntityType<PokeBall>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<PokeBall>of(PokeBall::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
 	public static final RegistryObject<EntityType<PokeAnimal>> POKEANIMAL_ENTITY = ENTITIES.register("pokeanimal_entity", () -> EntityType.Builder.<PokeAnimal>of(PokeAnimal::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeanimal_entity"));
 
-	public static Item returnItem(String name) {
+	public static Item getAnimalItem(String name) {
 		var iter = ITEMS.getEntries().iterator();
 		while(iter.hasNext()){
 			var curItem = iter.next().get();
 			String curItemName = curItem.getRegistryName().toString();
-
 			if(curItemName.contains(name.toLowerCase())){
-				System.out.println(name);
 				return curItem;
 			}
 		}

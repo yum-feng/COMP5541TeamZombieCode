@@ -1,12 +1,18 @@
 package teamzombie.pokez.projectile;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import teamzombie.pokez.setup.Registration;
@@ -53,6 +59,18 @@ public class PokeAnimal extends ThrowableItemProjectile {
         if (!this.level.isClientSide) {
             this.level.broadcastEntityEvent(this, (byte)3);
             this.discard();
+
+            if (r.getType() == HitResult.Type.BLOCK){
+                BlockHitResult bhr = (BlockHitResult)r;
+                BlockPos bp = bhr.getBlockPos();
+                EntityType<?> entityType = EntityType.COW;
+                var newPokemon = entityType.spawn((ServerLevel)this.getLevel(), null, null, bp, MobSpawnType.SPAWN_EGG,false, false);
+                if(newPokemon == null){
+                    System.out.println("spawn did not work");
+                }else{
+                    System.out.println(newPokemon.getPosition(0).toString());
+                }
+            }
         }
         System.out.println(r.toString());
     }
