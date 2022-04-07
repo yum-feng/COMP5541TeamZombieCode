@@ -3,6 +3,7 @@ package teamzombie.pokez.setup;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -16,6 +17,8 @@ import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
 import teamzombie.pokez.projectile.PokeBall;
 import teamzombie.pokez.projectile.PokeAnimal;
+
+import java.util.Locale;
 
 /*+----------------------------------------------------------------------
 ||
@@ -46,7 +49,6 @@ public class Registration {
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PokeZ.MODID);
 	private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, PokeZ.MODID);
 
-
 	public static void init() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BLOCKS.register(bus);
@@ -67,6 +69,8 @@ public class Registration {
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
 
+
+
 	//Registering pokeball items
 	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeBallItem());
 	public static final RegistryObject<Item> Green_PokeBall = ITEMS.register("green_pokeball", () -> new PokeBallItem());
@@ -84,4 +88,19 @@ public class Registration {
 	// Entities
 	public static final RegistryObject<EntityType<PokeBall>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<PokeBall>of(PokeBall::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
 	public static final RegistryObject<EntityType<PokeAnimal>> POKEANIMAL_ENTITY = ENTITIES.register("pokeanimal_entity", () -> EntityType.Builder.<PokeAnimal>of(PokeAnimal::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeanimal_entity"));
+
+	public static Item returnItem(String name) {
+		var iter = ITEMS.getEntries().iterator();
+		while(iter.hasNext()){
+			var curItem = iter.next().get();
+			String curItemName = curItem.getRegistryName().toString();
+
+			if(curItemName.contains(name.toLowerCase())){
+				System.out.println(name);
+				return curItem;
+			}
+		}
+
+		return null;
+	}
 }

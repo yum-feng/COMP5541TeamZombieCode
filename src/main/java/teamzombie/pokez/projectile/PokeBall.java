@@ -4,13 +4,18 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import teamzombie.pokez.setup.Registration;
 import net.minecraft.world.entity.EntityType;
+
+import static teamzombie.pokez.setup.Registration.returnItem;
 
 public class PokeBall extends ThrowableItemProjectile {
 
@@ -44,8 +49,10 @@ public class PokeBall extends ThrowableItemProjectile {
     protected void onHitEntity(EntityHitResult ehr) {
         super.onHitEntity(ehr);
         Entity entity = ehr.getEntity();
-        System.out.println(entity.getName().getString());
-        entity.kill();
+
+        entity.spawnAtLocation(returnItem(entity.getName().getString()));
+        entity.remove(RemovalReason.KILLED);
+
     }
 
     protected void onHit(HitResult r) {

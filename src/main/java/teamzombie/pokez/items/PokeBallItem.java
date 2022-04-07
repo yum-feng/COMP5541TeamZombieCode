@@ -34,7 +34,6 @@ import teamzombie.pokez.setup.Registration;
 ||
 ++-----------------------------------------------------------------------*/
 public class PokeBallItem extends Item{
-
 	public PokeBallItem(Properties props) {
 		super(props.tab(ITEM_GROUP));
 	}
