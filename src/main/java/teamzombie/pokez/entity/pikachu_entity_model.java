@@ -1,4 +1,4 @@
-package teamzombie.pokez.entities;
+package teamzombie.pokez.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -8,15 +8,19 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.Entity;
 import teamzombie.pokez.PokeZ;
 
-public class pikachu_entity_model<T extends pikachu_entity> extends EntityModel<T> {
+public class pikachu_entity_model<Type extends pikachu_entity> extends EntityModel<Type> {
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(PokeZ.MODID, "pikachu_entity"), "main");
 	private final ModelPart bb_main;
 
 	public pikachu_entity_model(ModelPart root) {
 		this.bb_main = root.getChild("bb_main");
+	}
+
+	public pikachu_entity_model() {
+
+		bb_main = null;
 	}
 
 	public static LayerDefinition createBodyLayer() {
@@ -50,7 +54,7 @@ public class pikachu_entity_model<T extends pikachu_entity> extends EntityModel<
 	}
 
 	@Override
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setupAnim(Type entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
 	}
 

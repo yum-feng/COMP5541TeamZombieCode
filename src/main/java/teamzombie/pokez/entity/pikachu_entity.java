@@ -1,4 +1,4 @@
-package teamzombie.pokez.entities;
+package teamzombie.pokez.entity;
 
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;

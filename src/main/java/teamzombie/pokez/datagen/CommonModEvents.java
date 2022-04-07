@@ -5,7 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import teamzombie.pokez.PokeZ;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import teamzombie.pokez.entities.pikachu_entity;
+import teamzombie.pokez.entity.pikachu_entity;
 import teamzombie.pokez.setup.Registration;
 
 @Mod.EventBusSubscriber(modid = PokeZ.MODID, bus = Bus.MOD)
