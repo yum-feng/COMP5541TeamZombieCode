@@ -56,8 +56,7 @@ public class PokeBallItem extends Item{
 	}
 
 	public static final String TAB_NAME = "Pokeballs";
-	public static final Tags.IOptionalNamedTag<Item> POKEMON_BALLS = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokeball"));
-	
+
 	//basic properties of PokeBall item
 	private static final Item.Properties ITEM_PROPERTIES = new Item.Properties(); 
 	

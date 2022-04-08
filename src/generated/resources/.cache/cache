@@ -25,7 +25,3 @@ ce7b00dddc7dfe28d041e28e11926ef12740da40 assets/pokez/models/item/pokeball_red_b
 7d96e6967122984f6b19610ff71c3355109bfc00 data/pokez/loot_tables/blocks/pokeball_blue_block.json
 2dc6d88c264d6f720a3e1fa8d531746336807752 data/pokez/loot_tables/blocks/pokeball_green_block.json
 a1b62ea286d3a108e44bf19c413a4a79e59fe31b data/pokez/loot_tables/blocks/pokeball_red_block.json
-cc0647a1dc68aa04a7bfa5f4919283e296cf0ce1 data/pokez/tags/blocks/pokeball_block.json
-a76bb8bfc2df0f4ce2d4ff138a85c43761a1aa7c data/pokez/tags/items/pokeball.json
-5919c7f9924a8f23722086078fb1f613b1bec6aa data/pokez/tags/items/pokemon_animal.json
-cc0647a1dc68aa04a7bfa5f4919283e296cf0ce1 data/pokez/tags/items/pokemon_block.json
