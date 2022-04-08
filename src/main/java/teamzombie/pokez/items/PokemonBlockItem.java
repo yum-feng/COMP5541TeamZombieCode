@@ -1,14 +1,10 @@
 package teamzombie.pokez.items;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.common.Tags;
-import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.setup.Registration;
 
 /*+----------------------------------------------------------------------

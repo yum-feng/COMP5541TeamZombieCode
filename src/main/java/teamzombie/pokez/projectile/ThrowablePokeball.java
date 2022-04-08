@@ -6,7 +6,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -17,17 +16,17 @@ import java.util.Random;
 
 import static teamzombie.pokez.setup.Registration.*;
 
-public class PokeBall extends ThrowableItemProjectile {
+public class ThrowablePokeball extends ThrowableItemProjectile {
 
-    public PokeBall(EntityType<? extends ThrowableItemProjectile> et, Level l) {
+    public ThrowablePokeball(EntityType<? extends ThrowableItemProjectile> et, Level l) {
         super(et, l);
     }
 
-    public PokeBall(Level l, LivingEntity le) {
+    public ThrowablePokeball(Level l, LivingEntity le) {
         super(Registration.POKEBALL_ENTITY.get(), le, l);
     }
 
-    public PokeBall(Level l, double x, double y, double z) {
+    public ThrowablePokeball(Level l, double x, double y, double z) {
         super(Registration.POKEBALL_ENTITY.get(), x, y, z, l);
     }
 
@@ -38,8 +37,8 @@ public class PokeBall extends ThrowableItemProjectile {
     public void handleEntityEvent(byte b) {
         if (b == 1) {
             ParticleOptions po = ParticleTypes.ELECTRIC_SPARK;
-            var mag = 2;
-            var vmag = 3;
+            var mag = 1.5;
+            var vmag = 2;
             for(int i = 0; i < 100000; ++i) {
                 var r = new Random();
                 var x = this.getX() + (r.nextDouble(mag * 2) - mag);
@@ -62,41 +61,32 @@ public class PokeBall extends ThrowableItemProjectile {
         String thrownPokeballId = this.getItem().getItem().getDescriptionId();
         Item hitAnimalItem = getAnimalItem(hitEntity.getName().getString());
         if (!this.level.isClientSide) {
-
             if (thrownPokeballId == Red_PokeBall.get().getDescriptionId()) {
-                if (p >= 0.6) {
+                if (p >= 0.7) {
                     this.level.broadcastEntityEvent(this, (byte) 1);
                     hitEntity.spawnAtLocation(hitAnimalItem);
                     hitEntity.remove(RemovalReason.DISCARDED);
-                } else {
-                    hitEntity.spawnAtLocation(this.getItem());
-                }
+                } else hitEntity.spawnAtLocation(this.getItem());
             } else if (thrownPokeballId == Green_PokeBall.get().getDescriptionId()) {
-                if (p >= 0.3) {
+                if (p >= 0.4) {
                     this.level.broadcastEntityEvent(this, (byte) 1);
                     hitEntity.spawnAtLocation(getAnimalItem(hitEntity.getName().getString()));
                     hitEntity.remove(RemovalReason.DISCARDED);
-                } else {
-                    hitEntity.spawnAtLocation(this.getItem());
-
-                }
+                } else hitEntity.spawnAtLocation(this.getItem());
             } else if (thrownPokeballId == Blue_PokeBall.get().getDescriptionId()) {
                 if (p >= 0.05) {
                     this.level.broadcastEntityEvent(this, (byte) 1);
                     hitEntity.spawnAtLocation(getAnimalItem(hitEntity.getName().getString()));
                     hitEntity.remove(RemovalReason.DISCARDED);
-                } else {
-                    hitEntity.spawnAtLocation(this.getItem());
-                }
+                } else hitEntity.spawnAtLocation(this.getItem());
             }
             this.discard();
         }
-
     }
 
     protected void onHit(HitResult r) {
         super.onHit(r);
-        if (!this.level.isClientSide && ( r.getType() != HitResult.Type.ENTITY )) {
+        if (!this.level.isClientSide && (r.getType() != HitResult.Type.ENTITY)) {
             this.discard();
             this.spawnAtLocation(this.getItem());
         }

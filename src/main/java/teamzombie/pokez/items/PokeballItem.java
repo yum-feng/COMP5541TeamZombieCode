@@ -9,65 +9,59 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import teamzombie.pokez.projectile.ThrowablePokemonItem;
+import teamzombie.pokez.projectile.ThrowablePokeball;
 import teamzombie.pokez.setup.Registration;
 
 /*+----------------------------------------------------------------------
 ||
 ||  Class PokemonAnimalItem
 ||
-||         Author:  Adam Pearson
 ||
-||        Purpose:  This class is the base class for our pokemon animal
+||        Purpose:  This class is the base class for our PokeBall
 ||					items. It is used to add overall features to the
-||					pokemon animal items. 
+||					PokeBall items.
 ||
 ||  Inherits From:  Inherits from the forge Item class
 
 ||
 |+-----------------------------------------------------------------------
 ||
-||      Features:  I have added the tab property for the pokemon animals
+||      Features:  Added the tab property for the PokeBalls
 ||
 ++-----------------------------------------------------------------------*/
-
-public class PokemonAnimalItem extends Item {
-
-	// Default constructor
-	public PokemonAnimalItem(Properties props) {
+public class PokeballItem extends Item{
+	public PokeballItem(Properties props) {
 		super(props.tab(ITEM_GROUP));
 	}
 	
-	// New class constructor (class block properties)
-	public PokemonAnimalItem() {
-		super(ITEM_PROPERTIES);
+	public PokeballItem() {
+		super(ITEM_PROPERTIES.tab(ITEM_GROUP));
 	}
 
 	public InteractionResultHolder<ItemStack> use(Level l, Player p, InteractionHand ih) { //https://forums.minecraftforge.net/topic/103660-1171-custom-fishing-rod-doesnt-cast/
 		ItemStack itemstack = p.getItemInHand(ih);
 		l.playSound((Player)null, p.getX(), p.getY(), p.getZ(), SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 0.5F, 0.4F / (l.getRandom().nextFloat() * 0.4F + 0.8F));
 		if (!l.isClientSide) {
-			ThrowablePokemonItem pokemonProjectile = new ThrowablePokemonItem(l, p);
-			pokemonProjectile.setItem(itemstack);
-			pokemonProjectile.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 1.5F, 1.0F);
-			l.addFreshEntity(pokemonProjectile);
+			ThrowablePokeball pokeball = new ThrowablePokeball(l, p);
+			pokeball.setItem(itemstack);
+			pokeball.shootFromRotation(p, p.getXRot(), p.getYRot(), 0.0F, 1.5F, 1.0F);
+			l.addFreshEntity(pokeball);
 			itemstack.shrink(1);
 		}
 		return InteractionResultHolder.sidedSuccess(itemstack, l.isClientSide());
 	}
 
-	public static final String TAB_NAME = "Pokebies";
+	public static final String TAB_NAME = "Pokeballs";
 
-	// Define creative mode tab for pokemon animals
+	//basic properties of PokeBall item
+	private static final Item.Properties ITEM_PROPERTIES = new Item.Properties(); 
+	
+	// Define creative mode tab for PokeBall animals
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
 		@Override
 		public ItemStack makeIcon() { 
-			return new ItemStack (Registration.Wolf_Item.get()); 
+			return new ItemStack (Registration.Red_PokeBall.get());
 		};
 	};	
 	
-	//Properties of pokemon animal item
-	private static final Properties ITEM_PROPERTIES = new Properties()
-			.fireResistant()
-			.tab(ITEM_GROUP);
 }
