@@ -58,8 +58,7 @@ public class PokemonAnimalItem extends Item {
 		return InteractionResultHolder.sidedSuccess(itemstack, l.isClientSide());
 	}
 	public static final String TAB_NAME = "Pokebies";
-	public static final Tags.IOptionalNamedTag<Item> POKEMON_ANIMAL_ITEM = ItemTags.createOptional(new ResourceLocation(PokeZ.MODID, "pokemon_animal"));
-	
+
 	// Define creative mode tab for pokemon animals
 	private static final CreativeModeTab ITEM_GROUP = new CreativeModeTab(TAB_NAME) {
 		@Override
