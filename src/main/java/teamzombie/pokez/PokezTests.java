@@ -4,11 +4,20 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.RegisterGameTestsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.gametest.GameTestHolder;
 import teamzombie.pokez.setup.Registration;
+
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
+import net.minecraft.world.entity.EntityType;
 
 @GameTestHolder("pokez")
 
@@ -56,26 +65,24 @@ public class PokezTests {
         //Register the Green Pokeball Ore then test if it was created.
         helper.setBlock(pokezBlock, Registration.Green_Pokeball_Ore_Block.get());
         helper.assertBlockState(pokezBlock, b->b.is(Registration.Green_Pokeball_Ore_Block.get()), ()-> "Green_Pokeball_Ore_Block not present!");
-
         helper.succeed();
     }
-    
+
     @GameTest(templateNamespace = MODID, template = "empty3x3x3")
-    public static void testHopperPickup(GameTestHelper helper)
+    public static void testDestroyBlock111(GameTestHelper helper)
     {
-        BlockPos hopperPos = new BlockPos(1, 1, 1);
+        BlockPos pokezBlock = new BlockPos(1, 1, 1);
+        helper.destroyBlock(pokezBlock);
+        helper.succeed();
+    }
 
-        // Sets (1,1,1) to a hopper and spawns a golden apple one block above it
-        helper.setBlock(hopperPos, Blocks.HOPPER);
-        helper.spawnItem(Items.GOLDEN_APPLE, 1, 2, 1);
-
-        // Waits 20 ticks before checking that the hopper contains the golden apple
-        helper.assertAtTickTimeContainerContains(20, hopperPos, Items.GOLDEN_APPLE);
-
-        // Succeeds at 21 ticks if the previous check didn't throw an exception
-        helper.runAtTickTime(21, helper::succeed);
-    }   
-
-}    
+    @GameTest(templateNamespace = MODID, template = "empty3x3x3")
+    public static void testSpawnCow(GameTestHelper helper)
+    {
+        helper.spawn(EntityType.COW,1,1,1);
+        helper.assertEntityPresent(EntityType.COW);
+        helper.succeed();
+    }
+}
     
     
