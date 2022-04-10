@@ -65,6 +65,7 @@ public class Registration {
 	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Pikachu_Item = ITEMS.register("pikachu_item", () -> new PokemonAnimalItem());
 
 	//Registering pokeball items
 	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeballItem());
