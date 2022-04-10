@@ -9,10 +9,9 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.w3c.dom.Entity;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.entity.pikachu_entity;
-import teamzombie.pokez.items.PokeBallItem;
+import teamzombie.pokez.items.PokeballItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
 import teamzombie.pokez.blocks.PokeballOreBlock;
@@ -67,6 +66,7 @@ public class Registration {
 	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Pikachu_Item = ITEMS.register("pikachu_item", () -> new PokemonAnimalItem());
 
 	//Registering pokeball items
 	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeballItem());
@@ -84,6 +84,7 @@ public class Registration {
 	// Entities
 	public static final RegistryObject<EntityType<ThrowablePokeball>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<ThrowablePokeball>of(ThrowablePokeball::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
 	public static final RegistryObject<EntityType<ThrowablePokemonItem>> POKEANIMAL_ENTITY = ENTITIES.register("pokeanimal_entity", () -> EntityType.Builder.<ThrowablePokemonItem>of(ThrowablePokemonItem::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeanimal_entity"));
+	public static final RegistryObject<EntityType<pikachu_entity>> PIKACHU_ENTITY = ENTITIES.register("pikachu_entity", () -> EntityType.Builder.of(pikachu_entity::new, MobCategory.CREATURE).sized(0.8f, 0.6f).clientTrackingRange(4).updateInterval(10).build("pikachu_entity"));
 
 	public static Item getAnimalItem(String name) {
 		var iter = ITEMS.getEntries().iterator();
