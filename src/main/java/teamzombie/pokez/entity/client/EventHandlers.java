@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import teamzombie.pokez.PokeZ;
 import teamzombie.pokez.entity.pikachu_entity_model;
+import teamzombie.pokez.entity.pikachu_entity_renderer;
 import teamzombie.pokez.setup.Registration;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = PokeZ.MODID, value = Dist.CLIENT)
@@ -24,5 +25,10 @@ public class EventHandlers {
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(Registration.POKEBALL_ENTITY.get(), ThrownItemRenderer::new);
         event.registerEntityRenderer(Registration.POKEANIMAL_ENTITY.get(), ThrownItemRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void onRegisterRenderer(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(Registration.PIKACHU_ENTITY.get(), pikachu_entity_renderer::new);
     }
 }
