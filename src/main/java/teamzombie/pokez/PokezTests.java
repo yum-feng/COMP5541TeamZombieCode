@@ -85,5 +85,29 @@ public class PokezTests {
         // Succeeds at 21 ticks if the previous check didn't throw an exception
         helper.runAtTickTime(21, helper::succeed);
     }
+	
+    @GameTest(templateNamespace = MODID, template = "empty3x3x3")
+    public static void testDestroyBlock111(GameTestHelper helper)
+    {
+        BlockPos pokezBlock = new BlockPos(1, 1, 1);
+        helper.destroyBlock(pokezBlock);
+        helper.succeed();
+    }
 
+    @GameTest(templateNamespace = MODID, template = "empty3x3x3")
+    public static void testSpawnCow(GameTestHelper helper)
+    {
+        helper.spawn(EntityType.COW,1,1,1);
+        helper.assertEntityPresent(EntityType.COW);
+        helper.succeed();
+    }
+
+    @GameTest(templateNamespace = MODID, template = "empty3x3x3")
+    public static void testSpawnPikachu(GameTestHelper helper)
+    {
+        helper.spawn(Registration.PIKACHU_ENTITY.get(),1,1,1);
+        helper.assertEntityPresent(Registration.PIKACHU_ENTITY.get());
+        helper.succeed();
+    }
+	
 }
