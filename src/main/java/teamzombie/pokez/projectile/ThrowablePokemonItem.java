@@ -1,9 +1,11 @@
 package teamzombie.pokez.projectile;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
@@ -14,6 +16,8 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import teamzombie.pokez.setup.Registration;
 import net.minecraft.world.entity.EntityType;
+
+import java.util.Optional;
 
 public class ThrowablePokemonItem extends ThrowableItemProjectile {
 
@@ -37,7 +41,7 @@ public class ThrowablePokemonItem extends ThrowableItemProjectile {
             this.level.addParticle(po, this.getX(), this.getY(), this.getZ(), 0.0D, 0.0D, 0.0D);
         }
     }
-
+    
     protected void onHitEntity(EntityHitResult ehr) {
         super.onHitEntity(ehr);
     }
@@ -54,9 +58,13 @@ public class ThrowablePokemonItem extends ThrowableItemProjectile {
                 String registryName = this.getItem().getItem().getRegistryName().toString();
                 String animalItemName = registryName.substring(registryName.indexOf(":") + 1, registryName.indexOf("_"));
 
-                var entityType = EntityType.byString(animalItemName);
+                Optional<EntityType<?>> entityType = EntityType.byString(animalItemName);
 
-                var newPokemon = entityType.get().spawn((ServerLevel)this.getLevel(), null, null, bp.above(), MobSpawnType.SPAWN_EGG,false, false);
+                if(entityType.isEmpty()){
+                    entityType = Optional.of(Registration.PIKACHU_ENTITY.get());
+                }
+
+                Entity newPokemon = entityType.get().spawn((ServerLevel)this.getLevel(), null, null, bp.above(), MobSpawnType.SPAWN_EGG,false, false);
                 if(newPokemon == null){
                     System.out.println("spawn did not work");
                 }else{
