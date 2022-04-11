@@ -1,5 +1,7 @@
 package teamzombie.pokez.setup;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
@@ -10,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import teamzombie.pokez.PokeZ;
+import teamzombie.pokez.entity.pikachu_entity;
 import teamzombie.pokez.items.PokeballItem;
 import teamzombie.pokez.items.PokemonAnimalItem;
 import teamzombie.pokez.items.PokemonBlockItem;
@@ -23,7 +26,7 @@ import teamzombie.pokez.projectile.ThrowablePokemonItem;
 ||
 ||         Author:  Adam Pearson
 ||
-||        Purpose:  This class is used to register all our items, blocks 
+||        Purpose:  This class is used to register all our items, blocks
 ||					and entities for our pokez mod.
 ||
 |+-----------------------------------------------------------------------
@@ -32,27 +35,29 @@ import teamzombie.pokez.projectile.ThrowablePokemonItem;
 ||
 |+-----------------------------------------------------------------------
 ||
-||  Class Methods:  
+||  Class Methods:
 ||
-||		init(): Should be called by main mod class to initiate 
+||		init(): Should be called by main mod class to initiate
 ||				the registration
 ||
 ++-----------------------------------------------------------------------*/
 
 public class Registration {
-	
+
 	// Registries for blocks and items
 	private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PokeZ.MODID);
 	private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PokeZ.MODID);
 	private static final DeferredRegister<EntityType<?>> ENTITIES = DeferredRegister.create(ForgeRegistries.ENTITIES, PokeZ.MODID);
+	private static final DeferredRegister<SoundEvent> SOUNDS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, PokeZ.MODID);
 
 	public static void init() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		BLOCKS.register(bus);
 		ITEMS.register(bus);
 		ENTITIES.register(bus);
+		SOUNDS.register(bus);
 	}
-	
+
 	// Registering pokemon animal items
 	public static final RegistryObject<Item> Bee_Item = ITEMS.register("bee_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Cat_Item = ITEMS.register("cat_item", () -> new PokemonAnimalItem());
@@ -65,6 +70,7 @@ public class Registration {
 	public static final RegistryObject<Item> Rabbit_Item = ITEMS.register("rabbit_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Sheep_Item = ITEMS.register("sheep_item", () -> new PokemonAnimalItem());
 	public static final RegistryObject<Item> Wolf_Item = ITEMS.register("wolf_item", () -> new PokemonAnimalItem());
+	public static final RegistryObject<Item> Pikachu_Item = ITEMS.register("pikachu_item", () -> new PokemonAnimalItem());
 
 	//Registering pokeball items
 	public static final RegistryObject<Item> Red_PokeBall = ITEMS.register("red_pokeball", () -> new PokeballItem());
@@ -82,6 +88,10 @@ public class Registration {
 	// Entities
 	public static final RegistryObject<EntityType<ThrowablePokeball>> POKEBALL_ENTITY = ENTITIES.register("pokeball_entity", () -> EntityType.Builder.<ThrowablePokeball>of(ThrowablePokeball::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeball_entity"));
 	public static final RegistryObject<EntityType<ThrowablePokemonItem>> POKEANIMAL_ENTITY = ENTITIES.register("pokeanimal_entity", () -> EntityType.Builder.<ThrowablePokemonItem>of(ThrowablePokemonItem::new, MobCategory.MISC).sized(0.25f, 0.25f).clientTrackingRange(4).updateInterval(10).build("pokeanimal_entity"));
+	public static final RegistryObject<EntityType<pikachu_entity>> PIKACHU_ENTITY = ENTITIES.register("pikachu_entity", () -> EntityType.Builder.of(pikachu_entity::new, MobCategory.CREATURE).sized(0.8f, 0.6f).clientTrackingRange(4).updateInterval(10).build("pikachu_entity"));
+
+	// Sounds
+	public static final RegistryObject<SoundEvent> PIKACHU = SOUNDS.register("pikachu", () -> new SoundEvent(new ResourceLocation(PokeZ.MODID, "pikachu")));
 
 	public static Item getAnimalItem(String name) {
 		var iter = ITEMS.getEntries().iterator();

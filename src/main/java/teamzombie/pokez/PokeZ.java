@@ -1,5 +1,8 @@
 package teamzombie.pokez;
 
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.registries.DeferredRegister;
 import teamzombie.pokez.setup.Registration;
 import net.minecraftforge.fml.common.Mod;
 

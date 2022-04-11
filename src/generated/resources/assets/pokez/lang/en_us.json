@@ -16,7 +16,9 @@
   "item.pokez.red_pokeball": "Red PokeBall",
   "item.pokez.sheep_item": "Sheep",
   "item.pokez.wolf_item": "Wolf",
+  "item.pokez.pikachu_item": "Captured Pikachu",
   "itemGroup.Pokeballs": "Pokeballs",
   "itemGroup.Pokebies": "Pokebies",
-  "itemGroup.Pokemon Blocks": "Pokemon Blocks"
+  "itemGroup.Pokemon Blocks": "Pokemon Blocks",
+  "entity.pokez.pikachu_entity": "Pikachu"
 }
