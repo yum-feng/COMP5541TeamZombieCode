@@ -49,33 +49,25 @@ public class ThrowablePokemonItem extends ThrowableItemProjectile {
 
     protected void onHit(HitResult r) {
         super.onHit(r);
-        if (!this.level.isClientSide) {
+        if (!this.level.isClientSide && (r.getType() == HitResult.Type.BLOCK)) {
             this.level.broadcastEntityEvent(this, (byte)1);
             this.discard();
 
-            if (r.getType() == HitResult.Type.BLOCK){
-                BlockHitResult bhr = (BlockHitResult)r;
-                BlockPos bp = bhr.getBlockPos();
-                String registryName = this.getItem().getItem().getRegistryName().toString();
-                String animalItemName = registryName.substring(registryName.indexOf(":") + 1, registryName.indexOf("_"));
+            BlockHitResult bhr = (BlockHitResult)r;
+            BlockPos bp = bhr.getBlockPos();
+            String registryName = this.getItem().getItem().getRegistryName().toString();
+            String animalItemName = registryName.substring(registryName.indexOf(":") + 1, registryName.indexOf("_"));
 
-                Optional<EntityType<?>> entityType = EntityType.byString(animalItemName);
+            // Find animal entity using name
+            Optional<EntityType<?>> entityType = EntityType.byString(animalItemName);
 
-                if(entityType.isEmpty()){
-                    entityType = Optional.of(Registration.PIKACHU_ENTITY.get());
-                    level.playSound(null, this.getX(), this.getY(), this.getZ(), Registration.PIKACHU.get(), SoundSource.AMBIENT, 1, 1);
-                }
-
-                Entity newPokemon = entityType.get().spawn((ServerLevel)this.getLevel(), null, null, bp.above(), MobSpawnType.SPAWN_EGG,false, false);
-
-
-                if(newPokemon == null){
-                    System.out.println("spawn did not work");
-                }else{
-                    System.out.println(newPokemon.getPosition(0).toString());
-                }
+            // Support for mod pokemon which can't be searched by name
+            if(entityType.isEmpty()){
+                entityType = Optional.of(Registration.PIKACHU_ENTITY.get());
+                level.playSound(null, this.getX(), this.getY(), this.getZ(), Registration.PIKACHU.get(), SoundSource.AMBIENT, 1, 1);
             }
+            Entity newPokemon = entityType.get().spawn((ServerLevel)this.getLevel(), null, null, bp.above(), MobSpawnType.SPAWN_EGG,false, false);
+
         }
-        System.out.println(r.toString());
     }
 }
