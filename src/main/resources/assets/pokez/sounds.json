@@ -1,0 +1,10 @@
+{
+  "pikachu": {
+    "category" : "player",
+    "sounds": [{
+      "name": "pokez:pikachu",
+      "stream": false
+    }
+    ]
+  }
+}
