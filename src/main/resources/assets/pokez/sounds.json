@@ -1,8 +1,14 @@
 {
   "pikachu": {
-    "category" : "player",
     "sounds": [{
       "name": "pokez:pikachu",
+      "stream": false
+    }
+    ]
+  },
+  "catch": {
+    "sounds": [{
+      "name": "pokez:catch",
       "stream": false
     }
     ]

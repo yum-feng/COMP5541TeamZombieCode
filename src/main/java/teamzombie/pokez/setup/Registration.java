@@ -92,6 +92,8 @@ public class Registration {
 
 	// Sounds
 	public static final RegistryObject<SoundEvent> PIKACHU = SOUNDS.register("pikachu", () -> new SoundEvent(new ResourceLocation(PokeZ.MODID, "pikachu")));
+	public static final RegistryObject<SoundEvent> CATCH = SOUNDS.register("catch", () -> new SoundEvent(new ResourceLocation(PokeZ.MODID, "catch")));
+
 
 	public static Item getAnimalItem(String name) {
 		var iter = ITEMS.getEntries().iterator();
